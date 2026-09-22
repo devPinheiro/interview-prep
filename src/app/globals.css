@@ -1,26 +1,218 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import "../styles/tokens.css";
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--bg);
+  --color-foreground: var(--ink);
+  --font-sans: var(--font-figtree);
+  --font-mono: var(--font-ibm-plex-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  font-feature-settings: "ss01" on, "kern" on;
+  background-image:
+    linear-gradient(180deg, transparent 0%, var(--bg) 72%),
+    radial-gradient(ellipse 90% 55% at 80% -5%, var(--accent-glow), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 0% 20%, rgba(14, 17, 22, 0.04), transparent 50%),
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size:
+    auto,
+    auto,
+    auto,
+    48px 48px,
+    48px 48px;
+  background-attachment: fixed;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+.prose-study h2 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
+  margin: 1.25rem 0 0.5rem;
+  color: var(--ink);
+}
+
+.prose-study p {
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0.55rem 0;
+}
+
+.prose-study ul {
+  margin: 0.5rem 0 0.5rem 1.1rem;
+  color: var(--muted);
+}
+
+.prose-study code {
+  font-family: var(--font-mono);
+  font-size: 0.84em;
+  background: var(--accent-soft);
+  color: var(--accent-hot);
+  padding: 0.12em 0.4em;
+  border-radius: 3px;
+}
+
+.prose-study pre {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  line-height: 1.55;
+  background: var(--ink);
+  color: #d7dde6;
+  border: none;
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+  overflow-x: auto;
+  margin: 0.85rem 0;
+}
+
+.prose-study pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes ladder-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.55s var(--ease-out) both;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s var(--ease-out) both;
+}
+
+.animate-delay-1 {
+  animation-delay: 0.08s;
+}
+.animate-delay-2 {
+  animation-delay: 0.16s;
+}
+.animate-delay-3 {
+  animation-delay: 0.24s;
+}
+.animate-delay-4 {
+  animation-delay: 0.32s;
+}
+
+.animate-reveal {
+  animation: ladder-rise 0.45s var(--ease-out) both;
+}
+
+.underline-draw {
+  position: relative;
+}
+
+.underline-draw::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1.5px;
+  background: var(--accent);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.35s var(--ease-out);
+}
+
+.underline-draw:hover::after,
+.underline-draw[data-active="true"]::after {
+  transform: scaleX(1);
+}
+
+.row-shift {
+  transition:
+    transform 0.35s var(--ease-out),
+    background-color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.row-shift:hover {
+  transform: translateX(4px);
+}
+
+.hero-lattice {
+  background-image:
+    linear-gradient(
+      135deg,
+      transparent 40%,
+      var(--accent-glow) 40%,
+      var(--accent-glow) 41%,
+      transparent 41%
+    ),
+    repeating-linear-gradient(
+      -12deg,
+      transparent,
+      transparent 14px,
+      rgba(14, 17, 22, 0.045) 14px,
+      rgba(14, 17, 22, 0.045) 15px
+    );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

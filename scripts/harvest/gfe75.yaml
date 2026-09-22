@@ -1,0 +1,71 @@
+items:
+  - title: Debounce
+    track: dsa
+    level: mid
+    canonicalTopic: debounce
+    site: greatfrontend
+    url: https://www.greatfrontend.com/interviews/gfe75
+    tags: [javascript]
+  - title: Throttle
+    track: dsa
+    level: mid
+    canonicalTopic: throttle
+    site: greatfrontend
+    url: https://www.greatfrontend.com/interviews/gfe75
+    tags: [javascript]
+  - title: Event Emitter
+    track: dsa
+    level: mid
+    canonicalTopic: event-emitter
+    site: greatfrontend
+    url: https://www.greatfrontend.com/interviews/gfe75
+    tags: [javascript]
+  - title: Deep Clone
+    track: dsa
+    level: mid
+    canonicalTopic: deep-clone
+    site: greatfrontend
+    url: https://www.greatfrontend.com/interviews/gfe75
+    tags: [javascript]
+  - title: Flatten
+    track: dsa
+    level: mid
+    canonicalTopic: flatten-array
+    site: greatfrontend
+    url: https://www.greatfrontend.com/interviews/gfe75
+    tags: [javascript]
+  - title: Todo List UI
+    track: dsa
+    level: mid
+    canonicalTopic: ui-todo
+    site: greatfrontend
+    url: https://www.greatfrontend.com/interviews/gfe75
+    tags: [ui-coding]
+  - title: Design autocomplete
+    track: system-design
+    level: mid
+    canonicalTopic: autocomplete
+    site: greatfrontend
+    url: https://www.greatfrontend.com/questions/system-design
+    tags: [system-design]
+  - title: Design a news feed
+    track: system-design
+    level: senior
+    canonicalTopic: news-feed
+    site: greatfrontend
+    url: https://www.greatfrontend.com/questions/system-design
+    tags: [system-design]
+  - title: Accessibility fundamentals quiz
+    track: quiz
+    level: mid
+    canonicalTopic: accessibility
+    site: greatfrontend
+    url: https://www.greatfrontend.com/interviews/gfe75
+    tags: [a11y]
+  - title: Box model quiz
+    track: quiz
+    level: beginner
+    canonicalTopic: box-model
+    site: greatfrontend
+    url: https://www.greatfrontend.com/interviews/gfe75
+    tags: [css]

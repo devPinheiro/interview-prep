@@ -1,0 +1,455 @@
+generatedAt: 2026-09-22T00:29:18.800Z
+entries:
+  - id: cat-two-sum
+    track: dsa
+    level: beginner
+    canonicalTopic: two-sum
+    title: Two Sum
+    status: stub
+    tags:
+      - arrays
+    sourceRefs:
+      - site: blind75
+        url: https://www.techinterviewhandbook.org/grind75
+  - id: cat-valid-anagram
+    track: dsa
+    level: beginner
+    canonicalTopic: valid-anagram
+    title: Valid Anagram
+    status: stub
+    tags:
+      - strings
+    sourceRefs:
+      - site: blind75
+        url: https://www.techinterviewhandbook.org/grind75
+  - id: cat-contains-duplicate
+    track: dsa
+    level: beginner
+    canonicalTopic: contains-duplicate
+    title: Contains Duplicate
+    status: stub
+    tags:
+      - arrays
+    sourceRefs:
+      - site: blind75
+        url: https://www.techinterviewhandbook.org/grind75
+  - id: cat-valid-parentheses
+    track: dsa
+    level: beginner
+    canonicalTopic: valid-parentheses
+    title: Valid Parentheses
+    status: stub
+    tags:
+      - stack
+    sourceRefs:
+      - site: blind75
+        url: https://www.techinterviewhandbook.org/grind75
+  - id: cat-merge-intervals
+    track: dsa
+    level: mid
+    canonicalTopic: merge-intervals
+    title: Merge Intervals
+    status: stub
+    tags:
+      - intervals
+    sourceRefs:
+      - site: blind75
+        url: https://www.techinterviewhandbook.org/grind75
+  - id: cat-number-of-islands
+    track: dsa
+    level: mid
+    canonicalTopic: number-of-islands
+    title: Number of Islands
+    status: stub
+    tags:
+      - graphs
+    sourceRefs:
+      - site: blind75
+        url: https://www.techinterviewhandbook.org/grind75
+  - id: cat-course-schedule
+    track: dsa
+    level: mid
+    canonicalTopic: course-schedule
+    title: Course Schedule
+    status: stub
+    tags:
+      - graphs
+    sourceRefs:
+      - site: blind75
+        url: https://www.techinterviewhandbook.org/grind75
+  - id: cat-level-order
+    track: dsa
+    level: mid
+    canonicalTopic: level-order
+    title: Binary Tree Level Order
+    status: stub
+    tags:
+      - trees
+    sourceRefs:
+      - site: blind75
+        url: https://www.techinterviewhandbook.org/grind75
+  - id: cat-debounce
+    track: dsa
+    level: mid
+    canonicalTopic: debounce
+    title: Debounce
+    status: stub
+    tags:
+      - javascript
+    sourceRefs:
+      - site: greatfrontend
+        url: https://www.greatfrontend.com/interviews/gfe75
+  - id: cat-throttle
+    track: dsa
+    level: mid
+    canonicalTopic: throttle
+    title: Throttle
+    status: stub
+    tags:
+      - javascript
+    sourceRefs:
+      - site: greatfrontend
+        url: https://www.greatfrontend.com/interviews/gfe75
+  - id: cat-event-emitter
+    track: dsa
+    level: mid
+    canonicalTopic: event-emitter
+    title: Event Emitter
+    status: stub
+    tags:
+      - javascript
+    sourceRefs:
+      - site: greatfrontend
+        url: https://www.greatfrontend.com/interviews/gfe75
+  - id: cat-deep-clone
+    track: dsa
+    level: mid
+    canonicalTopic: deep-clone
+    title: Deep Clone
+    status: stub
+    tags:
+      - javascript
+    sourceRefs:
+      - site: greatfrontend
+        url: https://www.greatfrontend.com/interviews/gfe75
+  - id: cat-flatten-array
+    track: dsa
+    level: mid
+    canonicalTopic: flatten-array
+    title: Flatten
+    status: stub
+    tags:
+      - javascript
+    sourceRefs:
+      - site: greatfrontend
+        url: https://www.greatfrontend.com/interviews/gfe75
+  - id: cat-ui-todo
+    track: dsa
+    level: mid
+    canonicalTopic: ui-todo
+    title: Todo List UI
+    status: stub
+    tags:
+      - ui-coding
+    sourceRefs:
+      - site: greatfrontend
+        url: https://www.greatfrontend.com/interviews/gfe75
+  - id: cat-autocomplete
+    track: system-design
+    level: mid
+    canonicalTopic: autocomplete
+    title: Design autocomplete
+    status: stub
+    tags:
+      - system-design
+    sourceRefs:
+      - site: greatfrontend
+        url: https://www.greatfrontend.com/questions/system-design
+  - id: cat-news-feed
+    track: system-design
+    level: senior
+    canonicalTopic: news-feed
+    title: Design a news feed
+    status: stub
+    tags:
+      - system-design
+    sourceRefs:
+      - site: greatfrontend
+        url: https://www.greatfrontend.com/questions/system-design
+  - id: cat-accessibility
+    track: quiz
+    level: mid
+    canonicalTopic: accessibility
+    title: Accessibility fundamentals quiz
+    status: stub
+    tags:
+      - a11y
+    sourceRefs:
+      - site: greatfrontend
+        url: https://www.greatfrontend.com/interviews/gfe75
+  - id: cat-box-model
+    track: quiz
+    level: beginner
+    canonicalTopic: box-model
+    title: Box model quiz
+    status: stub
+    tags:
+      - css
+    sourceRefs:
+      - site: greatfrontend
+        url: https://www.greatfrontend.com/interviews/gfe75
+      - site: gfg
+        url: https://www.geeksforgeeks.org/interview-prep/front-end-developer-interview-questions/
+  - id: cat-specificity
+    track: quiz
+    level: mid
+    canonicalTopic: specificity
+    title: What is CSS specificity?
+    status: stub
+    tags:
+      - css
+    sourceRefs:
+      - site: gfg
+        url: https://www.geeksforgeeks.org/interview-prep/front-end-developer-interview-questions/
+  - id: cat-dom
+    track: quiz
+    level: beginner
+    canonicalTopic: dom
+    title: What is the DOM?
+    status: stub
+    tags:
+      - browser
+    sourceRefs:
+      - site: gfg
+        url: https://www.geeksforgeeks.org/interview-prep/front-end-developer-interview-questions/
+  - id: cat-hoisting
+    track: quiz
+    level: beginner
+    canonicalTopic: hoisting
+    title: What is hoisting?
+    status: stub
+    tags:
+      - javascript
+    sourceRefs:
+      - site: gfg
+        url: https://www.geeksforgeeks.org/interview-prep/front-end-developer-interview-questions/
+  - id: cat-flex-vs-grid
+    track: quiz
+    level: beginner
+    canonicalTopic: flex-vs-grid
+    title: Flexbox vs Grid
+    status: stub
+    tags:
+      - css
+    sourceRefs:
+      - site: gfg
+        url: https://www.geeksforgeeks.org/interview-prep/front-end-developer-interview-questions/
+  - id: cat-redux
+    track: quiz
+    level: mid
+    canonicalTopic: redux
+    title: What is Redux?
+    status: stub
+    tags:
+      - react
+    sourceRefs:
+      - site: gfg
+        url: https://www.geeksforgeeks.org/interview-prep/front-end-developer-interview-questions/
+  - id: cat-semantic-html
+    track: quiz
+    level: beginner
+    canonicalTopic: semantic-html
+    title: Semantic HTML importance
+    status: stub
+    tags:
+      - html
+    sourceRefs:
+      - site: gfg
+        url: https://www.geeksforgeeks.org/interview-prep/front-end-developer-interview-questions/
+  - id: cat-webpack
+    track: quiz
+    level: mid
+    canonicalTopic: webpack
+    title: What is webpack?
+    status: stub
+    tags:
+      - tooling
+    sourceRefs:
+      - site: gfg
+        url: https://www.geeksforgeeks.org/interview-prep/front-end-developer-interview-questions/
+  - id: cat-closures
+    track: quiz
+    level: mid
+    canonicalTopic: closures
+    title: Explain closures in JavaScript
+    status: stub
+    tags:
+      - javascript
+    sourceRefs:
+      - site: toptal-js
+        url: https://www.toptal.com/developers/javascript/interview-questions
+  - id: cat-event-loop
+    track: quiz
+    level: mid
+    canonicalTopic: event-loop
+    title: What is the event loop?
+    status: stub
+    tags:
+      - javascript
+    sourceRefs:
+      - site: toptal-js
+        url: https://www.toptal.com/developers/javascript/interview-questions
+  - id: cat-equality
+    track: quiz
+    level: beginner
+    canonicalTopic: equality
+    title: Difference between == and ===
+    status: stub
+    tags:
+      - javascript
+    sourceRefs:
+      - site: toptal-js
+        url: https://www.toptal.com/developers/javascript/interview-questions
+  - id: cat-promises
+    track: quiz
+    level: beginner
+    canonicalTopic: promises
+    title: What are JavaScript promises?
+    status: stub
+    tags:
+      - javascript
+    sourceRefs:
+      - site: toptal-js
+        url: https://www.toptal.com/developers/javascript/interview-questions
+  - id: cat-async-await
+    track: quiz
+    level: beginner
+    canonicalTopic: async-await
+    title: Explain async/await
+    status: stub
+    tags:
+      - javascript
+    sourceRefs:
+      - site: toptal-js
+        url: https://www.toptal.com/developers/javascript/interview-questions
+  - id: cat-pure-functions
+    track: quiz
+    level: mid
+    canonicalTopic: pure-functions
+    title: What is a pure function?
+    status: stub
+    tags:
+      - javascript
+    sourceRefs:
+      - site: toptal-js
+        url: https://www.toptal.com/developers/javascript/interview-questions
+  - id: cat-this-binding
+    track: quiz
+    level: mid
+    canonicalTopic: this-binding
+    title: Soft vs hard binding of this
+    status: stub
+    tags:
+      - javascript
+    sourceRefs:
+      - site: toptal-js
+        url: https://www.toptal.com/developers/javascript/interview-questions
+  - id: cat-memoization
+    track: quiz
+    level: mid
+    canonicalTopic: memoization
+    title: What is memoization?
+    status: stub
+    tags:
+      - javascript
+    sourceRefs:
+      - site: toptal-js
+        url: https://www.toptal.com/developers/javascript/interview-questions
+  - id: cat-react-hooks
+    track: quiz
+    level: mid
+    canonicalTopic: react-hooks
+    title: What are React hooks?
+    status: stub
+    tags:
+      - react
+    sourceRefs:
+      - site: toptal-react
+        url: https://www.toptal.com/developers/react/interview-questions
+  - id: cat-useeffect
+    track: quiz
+    level: mid
+    canonicalTopic: useeffect
+    title: What is useEffect and how does it replace lifecycle methods?
+    status: stub
+    tags:
+      - react
+    sourceRefs:
+      - site: toptal-react
+        url: https://www.toptal.com/developers/react/interview-questions
+  - id: cat-controlled-inputs
+    track: quiz
+    level: beginner
+    canonicalTopic: controlled-inputs
+    title: Controlled vs uncontrolled components
+    status: stub
+    tags:
+      - react
+    sourceRefs:
+      - site: toptal-react
+        url: https://www.toptal.com/developers/react/interview-questions
+  - id: cat-react-keys
+    track: quiz
+    level: mid
+    canonicalTopic: react-keys
+    title: Why are keys important in lists?
+    status: stub
+    tags:
+      - react
+    sourceRefs:
+      - site: toptal-react
+        url: https://www.toptal.com/developers/react/interview-questions
+  - id: cat-context-api
+    track: quiz
+    level: mid
+    canonicalTopic: context-api
+    title: What is the Context API?
+    status: stub
+    tags:
+      - react
+    sourceRefs:
+      - site: toptal-react
+        url: https://www.toptal.com/developers/react/interview-questions
+  - id: cat-react-memo
+    track: quiz
+    level: senior
+    canonicalTopic: react-memo
+    title: What is React.memo?
+    status: stub
+    tags:
+      - react
+    sourceRefs:
+      - site: toptal-react
+        url: https://www.toptal.com/developers/react/interview-questions
+  - id: cat-portals
+    track: quiz
+    level: mid
+    canonicalTopic: portals
+    title: What are portals in React?
+    status: stub
+    tags:
+      - react
+    sourceRefs:
+      - site: toptal-react
+        url: https://www.toptal.com/developers/react/interview-questions
+  - id: cat-rendering-strategies
+    track: quiz
+    level: senior
+    canonicalTopic: rendering-strategies
+    title: Server components vs client components
+    status: stub
+    tags:
+      - react
+    sourceRefs:
+      - site: toptal-react
+        url: https://www.toptal.com/developers/react/interview-questions

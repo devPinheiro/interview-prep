@@ -1,0 +1,57 @@
+items:
+  - title: What are React hooks?
+    track: quiz
+    level: mid
+    canonicalTopic: react-hooks
+    site: toptal-react
+    url: https://www.toptal.com/developers/react/interview-questions
+    tags: [react]
+  - title: What is useEffect and how does it replace lifecycle methods?
+    track: quiz
+    level: mid
+    canonicalTopic: useeffect
+    site: toptal-react
+    url: https://www.toptal.com/developers/react/interview-questions
+    tags: [react]
+  - title: Controlled vs uncontrolled components
+    track: quiz
+    level: beginner
+    canonicalTopic: controlled-inputs
+    site: toptal-react
+    url: https://www.toptal.com/developers/react/interview-questions
+    tags: [react]
+  - title: Why are keys important in lists?
+    track: quiz
+    level: mid
+    canonicalTopic: react-keys
+    site: toptal-react
+    url: https://www.toptal.com/developers/react/interview-questions
+    tags: [react]
+  - title: What is the Context API?
+    track: quiz
+    level: mid
+    canonicalTopic: context-api
+    site: toptal-react
+    url: https://www.toptal.com/developers/react/interview-questions
+    tags: [react]
+  - title: What is React.memo?
+    track: quiz
+    level: senior
+    canonicalTopic: react-memo
+    site: toptal-react
+    url: https://www.toptal.com/developers/react/interview-questions
+    tags: [react]
+  - title: What are portals in React?
+    track: quiz
+    level: mid
+    canonicalTopic: portals
+    site: toptal-react
+    url: https://www.toptal.com/developers/react/interview-questions
+    tags: [react]
+  - title: Server components vs client components
+    track: quiz
+    level: senior
+    canonicalTopic: rendering-strategies
+    site: toptal-react
+    url: https://www.toptal.com/developers/react/interview-questions
+    tags: [react]

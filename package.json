@@ -2,26 +2,45 @@
   "name": "interview-prep",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
-    "start": "next start",
-    "lint": "eslint"
+    "dev": "next dev --port 3456",
+    "dev:turbo": "next dev --turbopack --port 3456",
+    "build": "next build",
+    "build:clean": "rm -rf .next && next build",
+    "start": "next start --port 3456",
+    "lint": "eslint",
+    "content": "velite",
+    "ingest": "tsx scripts/ingest-normalize.ts",
+    "catalog:generate": "tsx scripts/generate-bulk-catalog.ts",
+    "catalog:select": "tsx scripts/select-bulk-1999.ts"
   },
   "dependencies": {
+    "@codesandbox/sandpack-react": "^2.20.0",
+    "clsx": "^2.1.1",
+    "gray-matter": "^4.0.3",
+    "idb": "^8.0.3",
+    "mermaid": "^11.17.2",
+    "next": "15.5.25",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "next": "15.5.25"
+    "yaml": "^2.9.1",
+    "zod": "^4.6.5"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/js-yaml": "^4.0.9",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.5.25",
-    "@eslint/eslintrc": "^3"
+    "tailwindcss": "^4",
+    "tsx": "^4.23.15",
+    "typescript": "^5",
+    "velite": "^0.4.0"
   }
 }

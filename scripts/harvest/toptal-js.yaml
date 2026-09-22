@@ -1,0 +1,58 @@
+# Hand-curated titles from public interview lists (no article bodies).
+items:
+  - title: Explain closures in JavaScript
+    track: quiz
+    level: mid
+    canonicalTopic: closures
+    site: toptal-js
+    url: https://www.toptal.com/developers/javascript/interview-questions
+    tags: [javascript]
+  - title: What is the event loop?
+    track: quiz
+    level: mid
+    canonicalTopic: event-loop
+    site: toptal-js
+    url: https://www.toptal.com/developers/javascript/interview-questions
+    tags: [javascript]
+  - title: Difference between == and ===
+    track: quiz
+    level: beginner
+    canonicalTopic: equality
+    site: toptal-js
+    url: https://www.toptal.com/developers/javascript/interview-questions
+    tags: [javascript]
+  - title: What are JavaScript promises?
+    track: quiz
+    level: beginner
+    canonicalTopic: promises
+    site: toptal-js
+    url: https://www.toptal.com/developers/javascript/interview-questions
+    tags: [javascript]
+  - title: Explain async/await
+    track: quiz
+    level: beginner
+    canonicalTopic: async-await
+    site: toptal-js
+    url: https://www.toptal.com/developers/javascript/interview-questions
+    tags: [javascript]
+  - title: What is a pure function?
+    track: quiz
+    level: mid
+    canonicalTopic: pure-functions
+    site: toptal-js
+    url: https://www.toptal.com/developers/javascript/interview-questions
+    tags: [javascript]
+  - title: Soft vs hard binding of this
+    track: quiz
+    level: mid
+    canonicalTopic: this-binding
+    site: toptal-js
+    url: https://www.toptal.com/developers/javascript/interview-questions
+    tags: [javascript]
+  - title: What is memoization?
+    track: quiz
+    level: mid
+    canonicalTopic: memoization
+    site: toptal-js
+    url: https://www.toptal.com/developers/javascript/interview-questions
+    tags: [javascript]

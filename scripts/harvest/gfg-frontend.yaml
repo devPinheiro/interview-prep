@@ -1,0 +1,57 @@
+items:
+  - title: What is the CSS box model?
+    track: quiz
+    level: beginner
+    canonicalTopic: box-model
+    site: gfg
+    url: https://www.geeksforgeeks.org/interview-prep/front-end-developer-interview-questions/
+    tags: [css]
+  - title: What is CSS specificity?
+    track: quiz
+    level: mid
+    canonicalTopic: specificity
+    site: gfg
+    url: https://www.geeksforgeeks.org/interview-prep/front-end-developer-interview-questions/
+    tags: [css]
+  - title: What is the DOM?
+    track: quiz
+    level: beginner
+    canonicalTopic: dom
+    site: gfg
+    url: https://www.geeksforgeeks.org/interview-prep/front-end-developer-interview-questions/
+    tags: [browser]
+  - title: What is hoisting?
+    track: quiz
+    level: beginner
+    canonicalTopic: hoisting
+    site: gfg
+    url: https://www.geeksforgeeks.org/interview-prep/front-end-developer-interview-questions/
+    tags: [javascript]
+  - title: Flexbox vs Grid
+    track: quiz
+    level: beginner
+    canonicalTopic: flex-vs-grid
+    site: gfg
+    url: https://www.geeksforgeeks.org/interview-prep/front-end-developer-interview-questions/
+    tags: [css]
+  - title: What is Redux?
+    track: quiz
+    level: mid
+    canonicalTopic: redux
+    site: gfg
+    url: https://www.geeksforgeeks.org/interview-prep/front-end-developer-interview-questions/
+    tags: [react]
+  - title: Semantic HTML importance
+    track: quiz
+    level: beginner
+    canonicalTopic: semantic-html
+    site: gfg
+    url: https://www.geeksforgeeks.org/interview-prep/front-end-developer-interview-questions/
+    tags: [html]
+  - title: What is webpack?
+    track: quiz
+    level: mid
+    canonicalTopic: webpack
+    site: gfg
+    url: https://www.geeksforgeeks.org/interview-prep/front-end-developer-interview-questions/
+    tags: [tooling]

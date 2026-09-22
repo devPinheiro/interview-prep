@@ -1,0 +1,44 @@
+:root {
+  /* Petrol studio — cool stone, ink, one accent */
+  --bg: #eef1f4;
+  --bg-elevated: #f7f8fa;
+  --bg-deep: #e4e8ed;
+  --ink: #0e1116;
+  --muted: #5c6570;
+  --line: #d5dbe3;
+  --accent: #0b6e6a;
+  --accent-hot: #08605c;
+  --accent-soft: #d8efed;
+  --accent-glow: rgba(11, 110, 106, 0.18);
+  --success: #1a7a4c;
+  --danger: #c0392b;
+  --warn: #9a6700;
+  --radius: 6px;
+  --radius-sm: 4px;
+  --shadow-soft: none;
+  --font-display: var(--font-instrument), "Iowan Old Style", Georgia, serif;
+  --font-sans: var(--font-figtree), "Avenir Next", "Segoe UI", sans-serif;
+  --font-mono: var(--font-ibm-plex-mono), "SF Mono", ui-monospace, monospace;
+  --page-max: 1120px;
+  --content-max: 720px;
+  --header-h: 56px;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0c0e12;
+    --bg-elevated: #14181f;
+    --bg-deep: #080a0d;
+    --ink: #eef1f4;
+    --muted: #8b93a0;
+    --line: #2a313c;
+    --accent: #3dbdb6;
+    --accent-hot: #5ad0c9;
+    --accent-soft: #143230;
+    --accent-glow: rgba(61, 189, 182, 0.2);
+    --success: #3dd68c;
+    --danger: #f97066;
+    --warn: #fdb022;
+  }
+}
