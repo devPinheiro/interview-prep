@@ -16,7 +16,7 @@ export function SiteHeader() {
           href="/"
           className="font-[family-name:var(--font-display)] text-[1.35rem] tracking-[-0.03em] text-[var(--ink)]"
         >
-          FrontVault
+          <span className="text-[var(--accent)]">Front</span>Vault
         </Link>
         <nav className="hidden items-center gap-5 md:flex">
           {TRACKS.map((t) => {
@@ -54,6 +54,12 @@ export function SiteHeader() {
             )}
           >
             Data
+          </Link>
+          <Link
+            href="/quiz"
+            className="ml-1 bg-[var(--ink)] px-3 py-1.5 text-[0.75rem] font-medium text-[var(--bg-elevated)] transition-colors hover:bg-[var(--accent)]"
+          >
+            Practice →
           </Link>
         </nav>
         <MobileNav />

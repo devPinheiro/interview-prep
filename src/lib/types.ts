@@ -55,6 +55,17 @@ export type Question = {
     interface: string[];
     observability: string[];
   };
+  /** Detailed front-end system design walkthrough, revealed with the solution. */
+  systemDesignGuide?: {
+    framing: string;
+    clarifyingQuestions: string[];
+    componentTree: string[];
+    stateModel: { name: string; owner: string; notes: string }[];
+    interfaces: { name: string; contract: string; why: string }[];
+    decisions: { decision: string; tradeoff: string }[];
+    deepDives: { title: string; content: string }[];
+    close: string;
+  };
   /** Behaviour */
   competencies?: string[];
   starModel?: {

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/Button";
 import type { Question } from "@/lib/types";
 import { upsertProgress, type RevealLevel } from "@/lib/progress";
 import { cn } from "@/lib/cn";
+import { SystemDesignGuide } from "@/components/system-design/SystemDesignGuide";
 
 const ORDER: RevealLevel[] = ["none", "hint", "approach", "solution"];
 
@@ -149,6 +150,7 @@ export function ProgressiveReveal({
             Solution
           </h3>
           <Markdownish text={question.solution} />
+          {question.systemDesignGuide && <SystemDesignGuide guide={question.systemDesignGuide} />}
           {question.interviewerNotes && (
             <>
               <h3 className="mb-2 mt-6 font-[family-name:var(--font-mono)] text-[0.65rem] uppercase tracking-[0.16em] text-[var(--warn)]">

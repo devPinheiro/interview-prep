@@ -4,88 +4,105 @@ import { countByTrack } from "@/lib/content";
 import { ContinueStudying } from "@/components/ContinueStudying";
 import { LevelPicker } from "@/components/LevelPicker";
 
+const TRACK_MARKS = ["01", "02", "03", "04", "05"];
+
 export default function HomePage() {
   const counts = countByTrack();
   const firstTrack = TRACKS[0];
+  const readyCount = Object.values(counts).reduce((total, track) => total + track.ready, 0);
 
   return (
-    <div>
-      {/* One composition: brand + line + CTA on a full-bleed lattice plane */}
-      <section className="hero-lattice relative min-h-[min(78vh,640px)] border-b border-[var(--line)]">
-        <div className="mx-auto flex max-w-[var(--page-max)] flex-col justify-end px-5 pb-14 pt-20 md:pb-16 md:pt-28">
-          <p className="animate-fade-up text-[0.7rem] font-medium uppercase tracking-[0.22em] text-[var(--accent)]">
-            Personal study vault
-          </p>
-          <h1 className="animate-fade-up animate-delay-1 mt-4 max-w-[11ch] font-[family-name:var(--font-display)] text-[clamp(3.5rem,12vw,7.5rem)] leading-[0.92] tracking-[-0.04em] text-[var(--ink)]">
-            FrontVault
+    <div className="home-shell">
+      <section className="home-hero">
+        <div className="home-hero-copy">
+          <p className="animate-fade-up home-eyebrow">Frontend interview practice, on your terms</p>
+          <h1 className="animate-fade-up animate-delay-1 home-title">
+            Get ready for
+            <span>the room.</span>
           </h1>
-          <p className="animate-fade-up animate-delay-2 mt-6 max-w-md text-[1.05rem] leading-relaxed text-[var(--muted)]">
-            Frontend interviews, beginner to principal — with progressive answers and in-browser
-            practice.
+          <p className="animate-fade-up animate-delay-2 home-intro">
+            Build the clarity, craft, and stories that turn a frontend interview into a
+            conversation you can lead.
           </p>
-          <div className="animate-fade-up animate-delay-3 mt-8 flex flex-wrap items-center gap-4">
-            <Link
-              href={`/${firstTrack.id}`}
-              className="bg-[var(--ink)] px-5 py-2.5 text-sm font-medium text-[var(--bg-elevated)] transition-colors hover:bg-[var(--accent)]"
-            >
-              Start with {firstTrack.label}
+          <div className="animate-fade-up animate-delay-3 home-actions">
+            <Link href={`/${firstTrack.id}`} className="primary-action">
+              Start a practice session <span aria-hidden="true">→</span>
             </Link>
-            <Link
-              href="/dsa"
-              className="underline-draw text-sm text-[var(--muted)] hover:text-[var(--ink)]"
-            >
-              Jump to DSA
-            </Link>
+            <a href="#tracks" className="secondary-action">
+              Explore every track
+            </a>
           </div>
         </div>
+
+        <aside className="animate-fade-up animate-delay-2 prep-card" aria-label="Study coverage">
+          <div className="prep-card-topline">
+            <span>Interview readiness</span>
+            <span className="prep-card-live">Live practice</span>
+          </div>
+          <div className="prep-orbit" aria-hidden="true">
+            <div className="prep-orbit-ring" />
+            <span className="prep-orbit-label prep-orbit-label-one">Think</span>
+            <span className="prep-orbit-label prep-orbit-label-two">Build</span>
+            <span className="prep-orbit-label prep-orbit-label-three">Tell</span>
+            <strong>{readyCount}</strong>
+            <small>ready prompts</small>
+          </div>
+          <p className="prep-card-copy">
+            One place for technical depth, system thinking, and the human side of the offer.
+          </p>
+        </aside>
       </section>
 
-      <div className="mx-auto max-w-[var(--page-max)] px-5 py-12">
-        <div className="animate-fade-up grid gap-10 border-b border-[var(--line)] pb-10 md:grid-cols-[1fr_1.2fr] md:items-end">
-          <LevelPicker />
-          <ContinueStudying />
+      <section className="home-utility" aria-label="Study preferences">
+        <div className="home-utility-lead">
+          <p className="section-kicker">Make it yours</p>
+          <p>Set the bar you’re aiming for, then pick up exactly where you left off.</p>
+        </div>
+        <LevelPicker />
+        <ContinueStudying />
+      </section>
+
+      <section id="tracks" className="home-tracks">
+        <div className="home-section-heading">
+          <div>
+            <p className="section-kicker">Your practice plan</p>
+            <h2>Five ways to show up prepared.</h2>
+          </div>
+          <p>
+            Move through the technical and human parts of the interview. Each track is built
+            for deliberate, repeatable practice.
+          </p>
         </div>
 
-        <section className="pt-4">
-          <div className="mb-2 flex items-baseline justify-between gap-4 pt-6">
-            <h2 className="font-[family-name:var(--font-display)] text-2xl tracking-[-0.02em]">
-              Tracks
-            </h2>
-            <p className="text-xs text-[var(--muted)]">Five surfaces. One job each.</p>
-          </div>
+        <ul className="track-grid">
+          {TRACKS.map((track, index) => {
+            const count = counts[track.id];
+            return (
+              <li key={track.id} className="animate-reveal" style={{ animationDelay: `${0.06 * index}s` }}>
+                <Link href={`/${track.id}`} className="track-card">
+                  <div className="track-card-meta">
+                    <span>{TRACK_MARKS[index]}</span>
+                    <span>{count.ready} ready</span>
+                  </div>
+                  <div>
+                    <h3>{track.label}</h3>
+                    <p>{track.blurb}</p>
+                  </div>
+                  <span className="track-card-arrow" aria-hidden="true">↗</span>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
 
-          <ul className="mt-2">
-            {TRACKS.map((t, i) => {
-              const c = counts[t.id];
-              return (
-                <li key={t.id}>
-                  <Link
-                    href={`/${t.id}`}
-                    className="row-shift group grid grid-cols-[3rem_1fr_auto] items-baseline gap-4 border-b border-[var(--line)] py-5 md:grid-cols-[4rem_1fr_auto]"
-                    style={{ animationDelay: `${0.05 * i}s` }}
-                  >
-                    <span className="font-[family-name:var(--font-mono)] text-xs text-[var(--muted)]">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <div>
-                      <div className="font-[family-name:var(--font-display)] text-[1.65rem] leading-none tracking-[-0.02em] text-[var(--ink)] transition-colors group-hover:text-[var(--accent)] md:text-[1.85rem]">
-                        {t.label}
-                      </div>
-                      <p className="mt-2 max-w-sm text-sm text-[var(--muted)]">{t.blurb}</p>
-                    </div>
-                    <div className="text-right font-[family-name:var(--font-mono)] text-[0.7rem] leading-relaxed text-[var(--muted)]">
-                      <div>
-                        <span className="text-[var(--accent)]">{c.ready}</span> ready
-                      </div>
-                      <div>{c.catalog} catalog</div>
-                    </div>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </section>
-      </div>
+      <section className="home-closing">
+        <p className="section-kicker">Keep the signal</p>
+        <h2>Practice the answer.<br />Own the conversation.</h2>
+        <Link href={`/${firstTrack.id}`} className="secondary-action">
+          Begin with a quick question <span aria-hidden="true">→</span>
+        </Link>
+      </section>
     </div>
   );
 }
