@@ -36,6 +36,16 @@ export function SiteHeader() {
             );
           })}
           <Link
+            href="/interview"
+            data-active={pathname === "/interview"}
+            className={cn(
+              "underline-draw text-[0.8125rem] text-[var(--muted)] hover:text-[var(--ink)]",
+              pathname === "/interview" && "text-[var(--ink)]",
+            )}
+          >
+            Interview
+          </Link>
+          <Link
             href="/review"
             data-active={pathname === "/review"}
             className={cn(

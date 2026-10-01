@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/Button";
+import { InterviewerSettings } from "@/components/InterviewerSettings";
 import { exportAll, getStorageError, importAll, pingStorage } from "@/lib/progress";
 
 export default function SettingsPage() {
@@ -61,7 +62,7 @@ export default function SettingsPage() {
         Data
       </h1>
       <p className="mt-4 max-w-md text-[1.05rem] leading-relaxed text-[var(--muted)]">
-        Progress, STAR drafts, RADIO notes, and negotiation worksheets stay in IndexedDB on this
+        Progress, STAR drafts, and negotiation worksheets stay in IndexedDB on this
         device. Export a backup anytime.
       </p>
 
@@ -102,6 +103,8 @@ export default function SettingsPage() {
           {message}
         </p>
       )}
+
+      <InterviewerSettings />
     </div>
   );
 }

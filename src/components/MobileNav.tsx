@@ -71,6 +71,15 @@ export function MobileNav() {
               })}
               <li className="border-t border-[var(--line)] pt-3 mt-3">
                 <Link
+                  href="/interview"
+                  onClick={() => setOpen(false)}
+                  className="text-sm text-[var(--muted)] hover:text-[var(--ink)]"
+                >
+                  Interview
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/review"
                   onClick={() => setOpen(false)}
                   className="text-sm text-[var(--muted)] hover:text-[var(--ink)]"
