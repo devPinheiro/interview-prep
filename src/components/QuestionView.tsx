@@ -5,7 +5,7 @@ import Link from "next/link";
 import type { Question } from "@/lib/types";
 import { ProgressiveReveal } from "@/components/reveal/ProgressiveReveal";
 import { PracticeSandbox } from "@/components/sandbox/PracticeSandbox";
-import { RadioWizard } from "@/components/radio/RadioWizard";
+import { SystemDesignArticle } from "@/components/system-design/SystemDesignArticle";
 import { StarBuilder } from "@/components/star/StarBuilder";
 import { NegotiationWorksheet } from "@/components/negotiation/NegotiationWorksheet";
 import { LevelBadge, Tag } from "@/components/ui/Badge";
@@ -52,6 +52,41 @@ export function QuestionView({ question, nextHref }: Props) {
       ...card,
       completed: rating >= 3,
     });
+  }
+
+  if (question.track === "system-design" && question.systemDesignGuide) {
+    return (
+      <article className="sd-page">
+        <div className="mb-5 flex flex-wrap items-center gap-x-4 gap-y-2">
+          <LevelBadge level={question.level} />
+          {question.tags.map((tag) => (
+            <Tag key={tag}>{tag}</Tag>
+          ))}
+        </div>
+        <h1 className="font-[family-name:var(--font-display)] text-[clamp(2rem,4vw,3rem)] leading-[1.05] tracking-[-0.03em] text-[var(--ink)]">
+          {question.title}
+        </h1>
+        <p className="sd-prompt">{question.prompt}</p>
+        <SystemDesignArticle sections={question.systemDesignGuide.sections} notes={question.interviewerNotes} />
+        {question.sourceRefs.length > 0 && (
+          <p className="sd-sources">
+            <span>Study deeper</span>
+            {question.sourceRefs.map((source) => (
+              <a key={source.url} href={source.url} target="_blank" rel="noreferrer">
+                {source.site}
+              </a>
+            ))}
+          </p>
+        )}
+        {nextHref && (
+          <div className="mt-10 flex justify-end border-t border-[var(--line)] pt-6">
+            <Link href={nextHref} className="underline-draw text-sm font-medium text-[var(--ink)] hover:text-[var(--accent)]">
+              Next question →
+            </Link>
+          </div>
+        )}
+      </article>
+    );
   }
 
   return (
@@ -139,7 +174,6 @@ export function QuestionView({ question, nextHref }: Props) {
         </div>
       )}
 
-      {question.track === "system-design" && <RadioWizard question={question} />}
       {question.track === "behaviour" && <StarBuilder question={question} />}
       {question.track === "negotiation" && <NegotiationWorksheet question={question} />}
 

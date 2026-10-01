@@ -4,13 +4,16 @@ type Props = {
   trackLabel: string;
   trackHref: string;
   suffix?: string;
+  wide?: boolean;
 };
 
-export function QuestionBreadcrumb({ trackLabel, trackHref, suffix }: Props) {
+export function QuestionBreadcrumb({ trackLabel, trackHref, suffix, wide }: Props) {
   return (
     <nav
       aria-label="Breadcrumb"
-      className="mx-auto max-w-[var(--content-max)] px-5 pt-8 font-[family-name:var(--font-mono)] text-[0.7rem] tracking-wide text-[var(--muted)]"
+      className={`mx-auto px-5 pt-8 font-[family-name:var(--font-mono)] text-[0.7rem] tracking-wide text-[var(--muted)] ${
+        wide ? "max-w-[var(--page-max)]" : "max-w-[var(--content-max)]"
+      }`}
     >
       <Link href="/" className="underline-draw hover:text-[var(--ink)]">
         Home

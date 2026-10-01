@@ -99,8 +99,8 @@ export default function HomePage() {
       <section className="home-closing">
         <p className="section-kicker">Keep the signal</p>
         <h2>Practice the answer.<br />Own the conversation.</h2>
-        <Link href={`/${firstTrack.id}`} className="secondary-action">
-          Begin with a quick question <span aria-hidden="true">→</span>
+        <Link href="/interview" className="secondary-action">
+          Sit a practice interview <span aria-hidden="true">→</span>
         </Link>
       </section>
     </div>

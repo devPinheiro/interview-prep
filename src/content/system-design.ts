@@ -1,3 +1,4 @@
+import { autocompleteGuide, newsFeedGuide, designSystemGuide, platformGuide } from "@/content/sd-articles";
 import type { Question } from "@/lib/types";
 
 export const systemDesignQuestions: Question[] = [
@@ -8,7 +9,7 @@ export const systemDesignQuestions: Question[] = [
     title: "Design an autocomplete typeahead",
     tags: ["search", "performance"],
     status: "ready",
-    canonicalTopic: "autocomplete",
+    canonicalTopic: "sd-autocomplete--design-the-frontend-for",
     prompt:
       "Design the frontend for a search typeahead that suggests results as the user types. Cover UX, data fetching, caching, accessibility, and failure modes.",
     hints: [
@@ -16,7 +17,7 @@ export const systemDesignQuestions: Question[] = [
       "Keyboard navigation and ARIA combobox pattern.",
     ],
     approach:
-      "RADIO walkthrough:\nR: latency budget, offline, mobile\nA: controlled input + suggestion list; optional virtualization\nD: query → results cache; session vs persisted\nI: debounce, abort controllers, skeleton states\nO: search latency metrics, empty-result rate",
+      "Treat typeahead as a race between keystrokes and the network. Debounce, abort stale responses, and keep the combobox contract.",
     solution:
       "Component tree: SearchBox → SuggestionsList → SuggestionItem.\nFetch with debounce (150–300ms) and AbortController.\nCache recent queries in memory (LRU).\nA11y: role=combobox, aria-activedescendant, arrow keys, Enter to select.\nErrors: show retry; never block typing.\nPerf: virtualize if >100 results; prioritize LCP of the page shell separately.",
     interviewerNotes:
@@ -52,6 +53,7 @@ export const systemDesignQuestions: Question[] = [
         "Click-through by rank position",
       ],
     },
+    systemDesignGuide: autocompleteGuide,
   },
   {
     id: "sd-news-feed",
@@ -60,7 +62,7 @@ export const systemDesignQuestions: Question[] = [
     title: "Design a social news feed UI",
     tags: ["feed", "infinite-scroll", "realtime"],
     status: "ready",
-    canonicalTopic: "news-feed",
+    canonicalTopic: "sd-news-feed--design-the-frontend-for",
     prompt:
       "Design a Facebook/Twitter-like feed: infinite scroll, mixed media, likes, and near-realtime updates. Focus on frontend architecture.",
     hints: [
@@ -104,6 +106,7 @@ export const systemDesignQuestions: Question[] = [
         "Realtime disconnect recovery",
       ],
     },
+    systemDesignGuide: newsFeedGuide,
   },
   {
     id: "sd-design-system",
@@ -153,6 +156,7 @@ export const systemDesignQuestions: Question[] = [
         "Bundle size budgets per package",
       ],
     },
+    systemDesignGuide: designSystemGuide,
   },
   {
     id: "sd-fe-platform",
@@ -202,5 +206,6 @@ export const systemDesignQuestions: Question[] = [
         "Migration burn-down",
       ],
     },
+    systemDesignGuide: platformGuide,
   },
 ];

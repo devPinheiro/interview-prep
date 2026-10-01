@@ -27,7 +27,7 @@ export default async function QuestionPage({ params }: Props) {
 
   return (
     <div>
-      <QuestionBreadcrumb trackLabel={meta.label} trackHref={`/${track}`} />
+      <QuestionBreadcrumb trackLabel={meta.label} trackHref={`/${track}`} wide={track === "system-design"} />
       <QuestionView question={question} nextHref={nextHref} />
     </div>
   );

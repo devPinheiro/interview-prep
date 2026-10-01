@@ -1,3 +1,15 @@
+export type DesignSection = {
+  id: string;
+  title: string;
+  /** Paragraphs separated by a blank line. A paragraph of "- " lines is a list. A ``` fence is code. A line starting with "## " is a subheading. */
+  body: string;
+  diagram?: { caption: string; mermaid: string };
+};
+
+export type SystemDesignGuide = {
+  sections: DesignSection[];
+};
+
 export type Level = "beginner" | "mid" | "senior" | "staff" | "principal";
 export type Track = "quiz" | "dsa" | "system-design" | "behaviour" | "negotiation";
 export type ContentStatus = "stub" | "drafted" | "ready";
@@ -47,7 +59,7 @@ export type Question = {
   /** DSA / UI coding */
   sandbox?: SandboxConfig;
   pattern?: string;
-  /** System design RADIO checkpoints */
+  /** Optional checkpoints kept for the interviewer rubric. Not rendered. */
   radioSteps?: {
     requirements: string[];
     architecture: string[];
@@ -55,17 +67,8 @@ export type Question = {
     interface: string[];
     observability: string[];
   };
-  /** Detailed front-end system design walkthrough, revealed with the solution. */
-  systemDesignGuide?: {
-    framing: string;
-    clarifyingQuestions: string[];
-    componentTree: string[];
-    stateModel: { name: string; owner: string; notes: string }[];
-    interfaces: { name: string; contract: string; why: string }[];
-    decisions: { decision: string; tradeoff: string }[];
-    deepDives: { title: string; content: string }[];
-    close: string;
-  };
+  /** Long-form system design article. */
+  systemDesignGuide?: SystemDesignGuide;
   /** Behaviour */
   competencies?: string[];
   starModel?: {
@@ -96,7 +99,7 @@ export const LEVELS: Level[] = ["beginner", "mid", "senior", "staff", "principal
 export const TRACKS: { id: Track; label: string; blurb: string }[] = [
   { id: "quiz", label: "Quiz", blurb: "JS, CSS, browser, React trivia" },
   { id: "dsa", label: "DSA", blurb: "Patterns + UI machine coding" },
-  { id: "system-design", label: "System Design", blurb: "RADIO frontend architecture" },
+  { id: "system-design", label: "System Design", blurb: "Frontend architecture, end to end" },
   { id: "behaviour", label: "Behaviour", blurb: "STAR(R) stories by level" },
   { id: "negotiation", label: "Negotiation", blurb: "Scripts, TC, offers" },
 ];
